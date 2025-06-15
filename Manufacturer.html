@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fake Product Identification</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: black;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: black;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 15px 30px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .navbar a:hover {
+            background-color: gray;
+        }
+
+        .main-title {
+            margin-top: 30px;
+        }
+
+        .main-title h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: black;
+        }
+
+        .welcome {
+            margin-top: 100px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-title">
+        <h1>FAKE PRODUCT IDENTIFICATION</h1>
+        <div class="subtitle">THROUGH BLOCKCHAIN</div>
+    </div>
+
+    <div class="navbar" id="navbar">
+        <a onclick="loadHome()">HOME</a>
+        <a onclick="loadManufacturer()">MANUFACTURER</a>
+        <a href="#">SELLER</a>
+        <a href="#">CONSUMER</a>
+    </div>
+
+    <div class="welcome" id="content">WELCOME</div>
+
+    <script>
+        function loadHome() {
+            const navbar = document.getElementById('navbar');
+            navbar.innerHTML = `
+                <a onclick="loadHome()">HOME</a>
+                <a onclick="loadManufacturer()">MANUFACTURER</a>
+                <a href="#">SELLER</a>
+                <a href="#">CONSUMER</a>
+            `;
+            document.getElementById('content').innerText = "WELCOME";
+        }
+
+        function loadManufacturer() {
+            const navbar = document.getElementById('navbar');
+            navbar.innerHTML = `
+                <a onclick="loadHome()">HOME</a>
+                <a href="#">ADD PRODUCT</a>
+                <a href="#">ADD SELLER</a>
+                <a href="#">SELL PRODUCT TO SELLER</a>
+                <a href="#">QUERY SELLER</a>
+            `;
+            document.getElementById('content').innerText = "Manufacturer Go to navigation bar to perform operations";
+        }
+    </script>
+
+</body>
+</html>
